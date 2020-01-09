@@ -12,7 +12,6 @@
         <activity android:name=".activities.TermsOfUseActivity" />
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.SplashActivity" />
-        <activity android:name=".SplashActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
