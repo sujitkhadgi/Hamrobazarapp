@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.AdPostRuleActivity"></activity>
+        <activity android:name=".ToolbarActivity"></activity>
+        <activity android:name=".activities.SignUpActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.DashboardActivity" />
+        <activity android:name=".activities.AdPostRuleActivity" />
         <activity android:name=".activities.SafetyTipsActivity" />
         <activity android:name=".activities.TermsOfUseActivity" />
         <activity android:name=".activities.WelcomeActivity" />
