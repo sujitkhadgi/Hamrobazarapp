@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.shallow.hamrobazar.R;
+
 public class WelcomeActivity extends AppCompatActivity {
 
     @Override
