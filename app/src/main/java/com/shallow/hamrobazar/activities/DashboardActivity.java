@@ -1,10 +1,19 @@
 package com.shallow.hamrobazar.activities;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -16,6 +25,7 @@ import com.shallow.hamrobazar.R;
 import com.shallow.hamrobazar.Url.Url;
 
 import java.util.List;
+import java.util.Timer;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
@@ -24,11 +34,17 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class DashboardActivity extends AppCompatActivity {
-
+    private RecyclerView itemsRecyclerView,itemsRecyclerViewTrend;
+    private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
+    private ViewPager viewPager;
+    private Timer timer;
+    private  int currentPosition=0;
    private ViewFlipper viewFlipper;
             private CircleImageView imageProfile;
             private RecyclerView recyclerView;
             private RecyclerView recentrecycleview;
+    public static String token="";//to check logged in or not
     private  int [] imageFiles={R.drawable.aa,R.drawable.ab,R.drawable.abc};
 
 
@@ -42,6 +58,15 @@ public class DashboardActivity extends AppCompatActivity {
 
                 recentrecycleview = findViewById(R.id.recentrecycleview);
               viewFlipper = findViewById(R.id.viewFlipper);
+
+                drawerLayout=findViewById(R.id.drawerLayout);
+                toolbar=findViewById(R.id.toolbar);
+
+
+                setSupportActionBar(toolbar);
+                ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.start,R.string.end);
+                drawerLayout.addDrawerListener(actionBarDrawerToggle);
+                actionBarDrawerToggle.syncState();
 
 
  for (int image:imageFiles)
@@ -105,7 +130,27 @@ public class DashboardActivity extends AppCompatActivity {
         viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
         viewFlipper.setOutAnimation(this,android.R.anim.slide_out_right);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.user:
+                if(token.equals(""))
+                {
+                    Intent intent = new Intent(DashboardActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(DashboardActivity.this,ProfileActivity.class);
+                    startActivity(intent);
+                }
+
         }
+        return super.onOptionsItemSelected(item);
+    }
+}
 
 
 

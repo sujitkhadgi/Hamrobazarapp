@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="Browse By category">
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_automobiles"
+                android:icon="@drawable/ic_directions_car"
+                android:title="automobiles" />
+            <item
+                android:id="@+id/nav_beauty"
+                android:icon="@drawable/beauty"
+                android:title="beauty and health" />
+            <item
+                android:id="@+id/nav_books"
+                android:icon="@drawable/book"
+                android:title="Books and learning" />
+
+        </group>
+    </item>
+
+
+</menu>
