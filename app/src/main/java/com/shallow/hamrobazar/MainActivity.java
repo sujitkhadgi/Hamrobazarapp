@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox chTerms, chSafety, chAd;
     Button btnAgree;
     String terms,safety,ad;
+    public static String token="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

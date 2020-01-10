@@ -1,13 +1,16 @@
 package com.shallow.hamrobazar.ServerResponse;
 
-public class RegisterResponse {
+public class UserResponse {
 
     private String status;
     private String token;
 
-    public RegisterResponse(String status, String token) {
+
+
+    public UserResponse(String status, String token) {
         this.status = status;
         this.token = token;
+
     }
 
     public String getStatus() {
@@ -25,4 +28,7 @@ public class RegisterResponse {
     public void setToken(String token) {
         this.token = token;
     }
+
+
+
 }

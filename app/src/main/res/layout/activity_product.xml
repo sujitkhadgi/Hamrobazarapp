@@ -10,10 +10,10 @@
     android:layout_marginVertical="20dp"
     android:layout_gravity="center"
     android:background="#fff"
-    tools:context=".Product">
+    >
 
     <TextView
-        android:id="@+id/tvProductName"
+        android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -28,9 +28,9 @@
         android:layout_height="100dp"
         android:src="@color/colorPrimary"
         android:scaleType="fitXY"
-        android:id="@+id/imgProfileImg"/>
+        android:id="@+id/itemImg"/>
     <TextView
-        android:id="@+id/tvProductPrice"
+        android:id="@+id/itemPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -40,7 +40,7 @@
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/tvProductType"
+        android:id="@+id/itemCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

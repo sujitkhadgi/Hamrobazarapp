@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shallow.hamrobazar">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,26 +13,27 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        android:theme="@style/AppTheme">
+        <activity android:name=".imgActivity">
 
+        </activity>
+        <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.SignUpActivity" />
-        <activity android:name=".activities.DashboardActivity">
-            </activity>
+        <activity android:name=".activities.DashboardActivity" />
         <activity android:name=".activities.AdPostRuleActivity" />
         <activity android:name=".activities.SafetyTipsActivity" />
         <activity android:name=".activities.TermsOfUseActivity" />
         <activity android:name=".activities.WelcomeActivity" />
-        <activity android:name=".activities.SplashActivity" >
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import com.shallow.hamrobazar.R;
 
@@ -19,7 +20,7 @@ public class AdPostRuleActivity extends AppCompatActivity {
         //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        webView= findViewById(R.id.txtTerm);
+        webView= findViewById(R.id.webView);
 
         webView.loadUrl("https://hamrobazaar.com/postrules.html");
     }
