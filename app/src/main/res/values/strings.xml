@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">HamroBazar</string>
+    <string name="start">Naviageation_drawer_start</string>
+    <string name="end">Naviageation_drawer_end</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shallow.hamrobazar">
 
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -20,7 +23,14 @@
         </activity>
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.SignUpActivity" />
-        <activity android:name=".activities.DashboardActivity" />
+        <activity android:name=".activities.DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.AdPostRuleActivity" />
         <activity android:name=".activities.SafetyTipsActivity" />
         <activity android:name=".activities.TermsOfUseActivity" />
@@ -33,7 +43,10 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity" />
+
+
     </application>
 
 </manifest>
